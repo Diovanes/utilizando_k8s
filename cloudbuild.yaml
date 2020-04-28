@@ -1,11 +1,7 @@
 steps:
   - name: "gcr.io/cloud-builders/go"
-    args: ["install", "soma"]
-    env: ["GOPATH=."]
+    args: ["install", "code"]
+    env: ["GOPATH=./parte3"]
   - name: "gcr.io/cloud-builders/go"
-    args: ["test", "soma"]
-    env: ["GOPATH=."]
-  - name: "gcr.io/cloud-builders/docker"
-    args: ["build", "--tag=gcr.io/$PROJECT_ID/soma", "."]
-
-images: ["gcr.io/$PROJECT_ID/soma"]
+    args: ["test", "code"]
+    env: ["GOPATH=./parte3"]
