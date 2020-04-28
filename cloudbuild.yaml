@@ -1,0 +1,11 @@
+steps:
+  - name: "gcr.io/cloud-builders/go"
+    args: ["install", "soma"]
+    env: ["GOPATH=."]
+  - name: "gcr.io/cloud-builders/go"
+    args: ["test", "soma"]
+    env: ["GOPATH=."]
+  - name: "gcr.io/cloud-builders/docker"
+    args: ["build", "--tag=gcr.io/$PROJECT_ID/soma", "."]
+
+images: ["gcr.io/$PROJECT_ID/soma"]

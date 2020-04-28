@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-server
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      name: go-server
+  template:
+    metadata:
+      labels:
+        name: go-server
+    spec:
+      containers:
+        - name: go
+          image: diovanes/desafio_k8s_p3
+          ports:
+            - containerPort: 8000
