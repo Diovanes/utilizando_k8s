@@ -32,5 +32,5 @@ No caso do Desafio Go, o fonte da aplicação, Dockerfile, etc também devem fic
 Crie um arquivo README.md e nele informe o endereço da imagem gerada no Docker Hub.
 
 
-Imagem 
+Imagem:  
 https://hub.docker.com/repository/docker/diovanes/desafio_k8s_p3
